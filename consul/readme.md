@@ -17,9 +17,6 @@
 客户端在调用服务A-N的时候，就跑去服务发现模块问下它们的网络位置,然后再调用它们的服务。
 这样的方式是不是就可以解决上面的问题了呢？
 客户端完全不需要记录这些服务网络位置，客户端和服务端完全解耦！
-  ```
-  这个过程大体是这样，当然服务发现模块没这么简单。里面包含的东西还很多。这样表述只是方便理解。
-  ```
 ### 1.3 一个较为完整的服务注册与发现流程
 ![使用服务注册发现](./images/4.jpeg)  
 ## 二、Consul 介绍
@@ -104,9 +101,7 @@ docker run  --net=host --name consul  \
 -config-dir /consul/config   \
 -join 192.168.1.60
   ```
-
  ### 3.3 Consul常用命令+常用选项
- 
  ```
  -bind：该地址用来在集群内部的通讯，集群内的所有节点到地址都必须是可达的，默认是0.0.0.0。
  -client：consul绑定在哪个client地址上，这个地址提供HTTP、DNS、RPC等服务，默认是127.0.0.1。
@@ -116,15 +111,12 @@ docker run  --net=host --name consul  \
  -ui   启用web管理页面
  -data-dir  指定agent储存状态的数据目录
 ```
-
 ### 3.4 Consul集群状态检查
-
 ```
 docker exec -it consul /bin/sh
 consul operator raft list-peers
 consul members
 ```
-
 ## 四、Spring Cloud Consul
 * 4.1服务发现与Consul
 
@@ -153,7 +145,6 @@ Consul实例的运行状况检查默认为“/actuator/health”，它是Spring 
   <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 ```
-
  (2) application.yml 
 ```
 server.port: 9093
