@@ -117,8 +117,8 @@ docker exec -it consul /bin/sh
 consul operator raft list-peers
 consul members
 ```
-## 四、Spring Cloud Consul
 
+## 四、Spring Cloud Consul
 ### 4.1服务发现与Consul
 服务发现是基于微服务架构的关键原则之一。尝试配置每个客户端或某种形式的约定可能非常困难,可以非常脆弱。  
 Consul通过HTTP API和DNS提供服务发现服务。Spring Cloud Consul利用HTTP API进行服务注册和发现。
