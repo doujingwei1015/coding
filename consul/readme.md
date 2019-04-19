@@ -139,7 +139,7 @@ Consul实例的运行状况检查默认为“/actuator/health”，它是Spring 
 
 * 4.4 springcloud2.0集成consul注册发现
 
-> (1)服务依赖
+ (1)服务依赖
 ```
 <dependency>
   <groupId>org.springframework.cloud</groupId>
@@ -150,7 +150,7 @@ Consul实例的运行状况检查默认为“/actuator/health”，它是Spring 
   <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 ```
->
+
  (2) application.yml 
 ```
 server.port: 9093
