@@ -106,6 +106,7 @@ docker run  --net=host --name consul  \
   ```
 
  ### 3.3 Consul常用命令+常用选项
+ 
  ```
  -bind：该地址用来在集群内部的通讯，集群内的所有节点到地址都必须是可达的，默认是0.0.0.0。
  -client：consul绑定在哪个client地址上，这个地址提供HTTP、DNS、RPC等服务，默认是127.0.0.1。
@@ -117,11 +118,13 @@ docker run  --net=host --name consul  \
 ```
 
 ### 3.4 Consul集群状态检查
+
 ```
 docker exec -it consul /bin/sh
 consul operator raft list-peers
 consul members
 ```
+
 ## 四、Spring Cloud Consul
 * 4.1服务发现与Consul
 
