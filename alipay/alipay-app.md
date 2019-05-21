@@ -2,14 +2,10 @@
 ## 一.支付对接流程
 ### 1.1 app支付整体流程图
 
- * 支付流程图
+ * [支付流程图](./images/1.png)
+    
+ * [支付接口调用图](./images/2.png)
  
-   ![图1](./images/1.png)
-   
- * 支付接口调用图
- 
-   ![图2](./images/2.png)
-
 ### 1.2 app接入步骤
 
 * 第一步 登录[支付宝开放平台](https://open.alipay.com/platform/home.htm),创建应用并获取APPID;(可使用支付宝沙箱环境进行集成测试)
