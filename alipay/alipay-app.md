@@ -40,13 +40,14 @@
 ## 二.SpringBoot集成app支付
 
 ### 2.1 服务端sdk 
-   <dependency>
+```
+ <dependency>
             <groupId>com.alipay.sdk</groupId>
             <artifactId>alipay-sdk-java</artifactId>
             <version>3.7.26.ALL</version>
   </dependency>
-
-
+```
+  
 ### 2.2 application.properties
   ```
 alipay.app_id=2016100100637459
