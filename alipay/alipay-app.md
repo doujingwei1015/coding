@@ -41,7 +41,15 @@
     
 ## 二.SpringBoot集成app支付
 
-### 2.1 application.properties
+### 2.1 服务端sdk 
+   <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>3.7.26.ALL</version>
+  </dependency>
+
+
+### 2.2 application.properties
   ```
 alipay.app_id=2016100100637459
 alipay.app_private_key=MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCICQ6YulEOVbK0fJvVAiUtqX7EXEEKkSOYRdPi0nNtEdFoZ66YsEb4pS1E+Sc7i6gHSBfOCZDjMATXYS7ZxFqS+5B2RdV/r8fIb6Des5cuXFcth8UA2bYi9S3EFZcR2+OaCW5iuu7V+0LMiUBrcYfSbJy5/yhf099U4669U32+PUMVLU+y9WkcHsqtUYm3twcHrc43IRCvy4DcUvVK4hVfLEHR5QHyLzHd1z0q3gqSY1EwqlyHXw0Y/MdSyD95BOClw/tvhMtwMClei+hMYyJvJJarA+Aj0UD+BSG1QNOyltbYSXp8G4svAeYpLWIJEjCPRjch3Enb/aZ43zYSD72ZAgMBAAECggEAd3gczZyzmvdAXqog4U1lAVkd761lobYdoJmSoF1a6asAUcTc3VPSwIOv4ic+gVkBVIPIBDb6e8usNMswrid3tCYilPx3qA/kUO9YRL1MRHbsSRw3s6t//et9KfwcFJ8coCcwPp0VK+/ilmbjoHiwY+jnK6Ie/ym/tXnP+I3enLc83d20FAvYmeqPGCZc3Vp/n6dxAfqD2c19tlyZpnL6cufnPN2z13AY6935V3hH+b97S8GjnDOq2MvMFuAG/b1HBiV+LGWrZUp6C0QiG+9iLwtykT3rUa+frmSFq+zd8pfSV77aYOMc1WkiVT6pmL8iXavF1KkxeCAt6EibcP8ZEQKBgQDaaFd2PjXzQwxw2fG0Z5QIVDPTdgkhzdRAwdbceca5TEDagwE/o3Veza67S4/RKkFszEN9Jm2MO/2dQxyOKtS/HkcmoIXHIOZSsZr0UC9PkPMbUdToEJMSf85JerWmi8KYBl8ZMpFag3PC4MTuNNqa0dVFvQ4/FpONFY6z784j1wKBgQCfcyl+7QAFuAlu00LYuvDs+KdKitBr5rXMUWDt8aBvYw8nmAab8bsM67n204nKzn0Repnvxi3x48gB0rL6j/qzOa8E8ZDDv90ncMv1bQvj9GPAyPbn7B/XXBboqnnEoTnP6RemTRdpDHTALKGafgPDOpya7QCK09qMo2xjfWz8DwKBgHsEBCc8eQSwQiSaDRKwuGdMjfhP5mrc1O04gL2j9XNO6MRqv1xJxAUG0qD5uWJ1a25NSsIFz/QJohpev4mvxC51blvqVA9Jj5EKKh3rwAoPuW4s1D91fnEP/W/TptbMp2kbRZsaqVYS7jPYh/MnX+2NvJNQHeMY4zi26K6epjv3AoGAW1a3AJR3HM+N58RxWIHOHZFbE6JtPkJNBhvf8K4nf2c5eS7nKlHRGte2EaSgHGMo1ehrYiUekKAxJIo0KMBtllmG3sgaa2fvIfbFf3PWCeEne3ojpjtnChEgtmthkbfhzC30dDlZHb4a6zMl58AkG6Pprf3x/5TYbxP2tQ9WbRUCgYEAvhOmjKmvwO1LIjbABsWeLBhlPGHCsDs/r55DtVfW+toDtI6BJbC9hrkxsZ11o1QouYLotz0ue19mbEJzGPhpaNWXhojInAzxe8qBVkEytlWJOQTXMFRpZM/+W+mbK5l0uWZ9lQjDcjCoixi/r8llvtnn9BLl4pSZX/5izUyShcQ=
@@ -51,7 +59,7 @@ alipay.product_code=QUICK_MSECURITY_PAY
 alipay.notify_url=http://liuxiaowei.free.idcfengye.com/api/alipay/noticeResponese
 ```  
  
-### 2.2 封装AlipayUtil.java
+### 2.3 封装AlipayUtil.java
 ```
 import com.alibaba.fastjson.JSON;
 import com.alipay.api.AlipayApiException;
@@ -234,7 +242,7 @@ public class AlipayUtil {
 
 ```
 
-### 2.3 生成支付订单
+### 2.4 生成支付订单
 ```
  public JSONObject generatePayOrderInfo(){
         String orderNo = OrderUtil.getOrderNo();
@@ -256,12 +264,12 @@ public class AlipayUtil {
 ```
 
 
-### 2.4 支付同步通知
+### 2.5 支付同步通知
  
  更新订单状态“待支付 -> 支付中 ”
 
 
-### 2.5 异步通知处理
+### 2.6 异步通知处理
 * 验证异步通知签名
 * 支付金额等异步通知参数校验
 * 更新支付订单状态“待支付或支付中 -> 支付成功 ”
