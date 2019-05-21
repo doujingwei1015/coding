@@ -10,7 +10,8 @@
 ## 2. 命名规范
    * 库名、表名、字段名、索引名全部小写。加上下划线'_'组成
    * <label style="color:red">表名最多三个单词，字段最多两个单词</label>
-   * <label style="color:red">库名、表名、字段名禁止使用MySQL保留字</label>[保留字] (https://www.cnblogs.com/duanxz/p/5099989.html)
+   * <label style="color:red">库名、表名、字段名禁止使用MySQL保留字</label>
+   * [保留字](https://www.cnblogs.com/duanxz/p/5099989.html)
    * 库名、表名、字段名禁止超过32个字符。须见名知意
    * <label style="color:red">临时库、表名必须以tmp 为前缀，并以日期为后缀</label>
    
