@@ -16,7 +16,7 @@
 
 * 第二步 下载[支付宝签名工具](https://docs.open.alipay.com/291/105971)，配置应用公私钥;
 
-* 第三步 springboot集成sdk开发;
+* 第三步 springboot集成[服务端sdk](https://docs.open.alipay.com/54)开发;
 
 * 第四步 App客户端sdk加载服务端sdk生成的orderstring，自动唤起支付宝app客户端进行支付！
 
@@ -326,6 +326,7 @@ public class AlipayUtil {
 * [支付宝沙箱环境指南](https://docs.open.alipay.com/200/105311)
 * [支付宝签名工具下载](https://docs.open.alipay.com/291/105971)
 * [支付宝应用网关和授权回调地址](https://blog.csdn.net/sinat_32575213/article/details/79713654)
+
 ### 3.2 工具类
 * [订单号生成工具类](util/OrderUtil.java)
 * [App支付工具类](util/AlipayUtil.java)
