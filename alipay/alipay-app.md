@@ -26,11 +26,11 @@
     
  * 已配置好的沙箱环境配置如下图
    
-   * [沙箱应用](./images/3.png)
+   ![沙箱应用](./images/3.png)
         
-   * [沙箱账号](./images/4.png)
+   ![沙箱账号](./images/4.png)
          
-   * [沙箱工具](./images/5.png)      
+   ![沙箱工具](./images/5.png)      
          
 
 ## 二.SpringBoot集成app支付
