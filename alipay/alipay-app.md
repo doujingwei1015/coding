@@ -24,7 +24,9 @@
  * 配置沙箱环境公私钥  
  
  * 下载沙箱应用钱包，沙箱钱包仅支持扫码支付、付款码支付。
-    
+ 
+ * APP支付只支持 Android 版接入，在使用 SDK 时，在支付接口前调用如下方法: EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
+ 
 ### 1.4 已配置好的沙箱环境配置如下图
    
  ![沙箱应用](./images/3.png)
