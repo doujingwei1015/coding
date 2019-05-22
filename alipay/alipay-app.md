@@ -22,7 +22,7 @@
 
 ### 1.3 关于沙箱环境
  
- * 登录支付宝开发平台，创建沙箱环境应用并获取appid。
+ * 登录[支付宝开放平台](https://open.alipay.com/platform/home.htm)，创建沙箱环境应用并获取appid。
  
  * 配置沙箱环境公私钥  
  
@@ -105,6 +105,7 @@ public class AlipayUtil {
     //签约产品码
     @Value("${alipay.product_code}")
     private String PRODUCT_CODE;
+    //异步通知地址
     @Value("${alipay.notify_url}")
     private String NOTIFY_URL;
 
