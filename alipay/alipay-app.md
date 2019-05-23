@@ -333,6 +333,7 @@ public class AlipayUtil {
 * [支付宝签名工具下载](https://docs.open.alipay.com/291/105971)
 * [支付宝应用网关和授权回调地址](https://blog.csdn.net/sinat_32575213/article/details/79713654)
 * [内网穿透工具ngrock下载](http://www.ngrok.cc/)
+* [生产环境联调日志排查](https://openmonitor.alipay.com/acceptance/cloudparse.htm)
 
 ### 3.2 工具类
 * [订单号生成工具类](util/OrderUtil.java)
