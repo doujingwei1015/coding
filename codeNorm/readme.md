@@ -19,7 +19,7 @@
     
     
 ##二、代码层次分明
-### 1.1src包 main\java\main\java\tk\mybatis\springboot
+### 1src包 main\java\main\java\tk\mybatis\springboot
 ![controller示例](images/1.png)
 
 |包名|作用|
@@ -37,7 +37,7 @@
 |utils|工具类|
 |vo|视图对象|
 
-### 1.2resources包
+### 1resources包
 
 ![controller示例](images/2.png)
 
